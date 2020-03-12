@@ -12,17 +12,20 @@ function nowServing(katzDeliLine) {
 
 }
 
-function currentLine(katzDeliLine) {
-  if (katzDeliLine.length > 1){
-    let printOut = `The line is currently: `
-    for (var i = 0; i < katzDeliLine.length - 1; i++){
+function currentLine(katzDeliLine){
+  var string = ``;
+  var list = [];
 
-      printOut.concat(`${i + 1}. ${katzDeliLine[i].toString()}, `)
-    return `The line is currently: ${i + 1}. ${katzDeliLine[i].toString()},`;
-    }
+  if(katzDeliLine.length === 0){
+    return `The line is currently empty.`;
+  } else{
+
+    for(var i = 0; i <katzDeliLine.length; i++){
+      list.push(`${i + 1}. ${katzDeliLine[i]}`);
+  	};
   }
-  else if (katzDeliLine.length = 1) {
-    return `The line is currently: 1. ${katzDeliLine[0].toString()}`;
-  }
-  return "The line is currently empty.";
-}
+
+  //the join method helps convert an array into a string with whatever separator
+  //is chosen.
+  return `The line is currently: ${list.join(`, `)}`;
+};
