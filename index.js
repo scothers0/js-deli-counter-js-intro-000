@@ -16,8 +16,7 @@ function currentLine(katzDeliLine) {
   if (katzDeliLine.length > 0){
     let printOut = `The line is currently: `;
     for (var i = 0; i < katzDeliLine.length - 1; i++){
-      let addOn = `${i + 1}. ${katzDeliLine[i]}, `;
-      printOut.concat(addOn);
+      printOut.concat(`${i + 1}. ${katzDeliLine[i]}, `);
   }
     printOut.concat(`${i + 1}. ${katzDeliLine[i]}`)
     return printOut;
