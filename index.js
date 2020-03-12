@@ -25,7 +25,5 @@ function currentLine(katzDeliLine){
   	};
   }
 
-  //the join method helps convert an array into a string with whatever separator
-  //is chosen.
   return `The line is currently: ${list.join(`, `)}`;
 };
